@@ -1,0 +1,155 @@
+/* 基本样式重置和设置 */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 页头 */
+header {
+    background-color: #6f42c1; /* 深紫色，与之前图标建议匹配 */
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 10px 0;
+    font-size: 2.5em;
+    display: flex; /* 让图标和文字在同一行 */
+    align-items: center;
+    justify-content: center; /* 水平居中 */
+}
+
+.header-icon {
+    width: 40px;  /* 调整图标大小 */
+    height: 40px;
+    margin-right: 15px; /* 图标和文字间距 */
+}
+
+
+.tagline {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+/* 主要内容区域 */
+main section {
+    padding: 60px 0;
+}
+
+main section:nth-child(even) { /* 添加一些视觉分隔 */
+    background-color: #fff;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #495057;
+}
+
+/* Hero 部分 */
+#hero {
+    text-align: center;
+}
+
+.screenshot { /* 应用截图样式 */
+    max-width: 80%;
+    margin: 30px auto;
+    display: block;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* CTA 按钮 (Call to Action) */
+.cta-button {
+    display: inline-block;
+    background-color: #ffc107; /* 黄色，与之前图标建议匹配 */
+    color: #343a40; /* 深灰文字，形成对比 */
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    background-color: #e0a800; /* 鼠标悬停颜色加深 */
+}
+
+/* 特性列表 */
+#features ul {
+    list-style: none;
+    padding: 0;
+    display: grid; /* 使用 Grid 布局 */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 响应式列 */
+    gap: 20px; /* 列间距 */
+}
+
+#features li {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-left: 4px solid #6f42c1; /* 左侧加点颜色 */
+}
+
+/* 如何使用列表 */
+#how-it-works ol {
+    max-width: 700px;
+    margin: 0 auto;
+    padding-left: 20px; /* 保持默认数字 */
+}
+
+#how-it-works li {
+    margin-bottom: 15px;
+}
+
+/* 下载部分 */
+#download {
+    text-align: center;
+    background-color: #e9ecef;
+}
+
+.download-button {
+    font-size: 1.1em;
+    padding: 15px 30px;
+}
+
+/* 页脚 */
+footer {
+    background-color: #343a40; /* 深灰色 */
+    color: #ccc;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* 简单的响应式处理 */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+    .header-icon {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+    #features ul {
+        grid-template-columns: 1fr; /* 小屏幕下单列显示 */
+    }
+}
